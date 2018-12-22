@@ -11,7 +11,8 @@ def index():
 @app.route('/home', methods = ['POST', 'GET'])
 def home():
     if('WebsiteURL' not in request.form or 'Keywords' not in request.form):
-        return render_template('search.html', links={"":("None")}, num=len({"":("None")}))
+        links= {"":("None")}
+        return render_template('search.html', links=links, num=len(links))
     else:
 
         url = request.form['WebsiteURL']
