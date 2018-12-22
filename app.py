@@ -10,18 +10,14 @@ def index():
 @app.route('/home', methods = ['POST', 'GET'])
 def home():
     if('WebsiteURL' not in request.form or 'Keywords' not in request.form):
-        links = {}
-        return render_template('search.html', links=links, num=len(links))
+        return render_template('search.html', links={"":("None")}, num=len({"":("None")}))
     else:
 
         url = request.form['WebsiteURL']
         keywords = request.form['Keywords'].split()
-        if 'Restrict' in request.form:
-            locNet = urlparse(url).netloc
-            sameDomain = True
-        else:
-            locNet = ""
-            sameDomain = False
+
+        locNet = urlparse(url).netloc
+        sameDomain = True
 
         visited = []
         current_level = 0
