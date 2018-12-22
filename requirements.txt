@@ -1,0 +1,8 @@
+Flask
+Flask-WTF
+Flask-RESTful
+gunicorn
+Jinja2
+peewee
+Werkzeug
+passlib
