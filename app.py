@@ -5,7 +5,8 @@ app.secret_key = 'hamzaelahgdfgsdfdfgisquash'
 
 @app.route('/')
 def index():
-    return redirect(url_for('home'))
+    # return redirect(url_for('home'))
+    return '<html><body><h1>Hello World</h1></body></html>'
 
 @app.route('/home', methods = ['POST', 'GET'])
 def home():
