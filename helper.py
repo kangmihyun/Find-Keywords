@@ -21,6 +21,8 @@ def Extractlinks(url):
 
     for linkTag in soup.findAll('a'):
         link = linkTag.get('href')
+        if not link:
+            continue
         # dealong with relative paths
         if("http:" not in link ):
             link = urljoin(url, link)
@@ -28,5 +30,27 @@ def Extractlinks(url):
 
     return links
 
+def DFS(url ,visited , current_level, level_limit):
+    visited.append(url)
+    print("URL: ", url)
+
+    current_level += 1
+    if(current_level == level_limit):
+        return
+    links = Extractlinks(url)
+    print("children links: ", links)
+    for link in links:
+        if link not in visited:
+            DFS(link ,visited , current_level, level_limit)
+
+
+
 if __name__ == '__main__':
+    url = "http://www.is.mcgill.ca/studentaid/workstudy/postings/index.htm"
+    # url = "http://www.mcgill.ca/studentaid/work-study/students/next-steps#hired"
     Extractlinks( "http://www.is.mcgill.ca/studentaid/workstudy/postings/index.htm")
+    visited = []
+    current_level = 0
+    level_limit =  3
+    DFS(url, visited, current_level, level_limit)
+    print(visited)
