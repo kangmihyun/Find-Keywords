@@ -26,7 +26,6 @@ def home():
 
         keywords_pattern = re.compile('|'.join(keywords))
         DFS(url, visited, current_level, level_limit, locNet, sameDomain)
-        return render_template('search.html', links={"":("None")}, num=len({"":("None")}))
         # print(visited)
         links = filter(visited, keywords_pattern)
         print(links)
