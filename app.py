@@ -5,8 +5,8 @@ app.secret_key = 'hamzaelahgdfgsdfdfgisquash'
 
 @app.route('/')
 def index():
-    # return redirect(url_for('home'))
-    return '<html><body><h1>Hello World</h1></body></html>'
+    return redirect(url_for('home'))
+    # return '<html><body><h1>Hello World</h1></body></html>'
 
 @app.route('/home', methods = ['POST', 'GET'])
 def home():
@@ -26,6 +26,7 @@ def home():
 
         keywords_pattern = re.compile('|'.join(keywords))
         DFS(url, visited, current_level, level_limit, locNet, sameDomain)
+        return render_template('search.html', links={"":("None")}, num=len({"":("None")}))
         # print(visited)
         links = filter(visited, keywords_pattern)
         print(links)
