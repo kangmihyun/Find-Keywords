@@ -1,4 +1,4 @@
-# Under Construction: do not use.
+# Only tested on a local server.
 
 # Find Webpage of a Website based on keywords
 
