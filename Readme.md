@@ -23,11 +23,11 @@ A website is made up of multiple web pages. A webpage can have links that redire
 2. Keywords found in the outputted web page.
 
 ## Other information:
-Project development started : 2018-12-22
-Is this broke ass student still looking for jobs: Yes
-Is this broke ass student handsome: Yes
-Did this application helped broke ass student to find a job: No
-Who is this broke ass student: call me Sumbal
+* Project development started : 2018-12-22
+* Is this broke ass student still looking for jobs: Yes
+* Is this broke ass student handsome: Yes
+* Did this application helped broke ass student to find a job: No
+* Who is this broke ass student: call me Sumbal
 
 ## License and Usage:
 This project is completely open-source and free-to-use. But you will need to mention about its author.
