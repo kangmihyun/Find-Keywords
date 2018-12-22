@@ -6,3 +6,4 @@ peewee
 Werkzeug
 passlib
 BeautifulSoup4
+lxml
